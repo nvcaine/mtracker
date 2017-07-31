@@ -1,14 +1,19 @@
 $(document).ready(onDocumentReady);
 
 function onDocumentReady() {
-	//$("#submit_button").click(submitButtonEventListener);
-	$("#label-cost-form").submit(submitEventListener);
+	$('#label-cost-form').submit(submitEventListener);
 }
 
 function submitEventListener() {
-	var labelValue = $("#label-input").val();
-	var costValue = $("#cost-input").val();
-	var alertText = "You spend " + costValue + " on " + labelValue;
+	var requestData = {
+		label: $('#label-input').val(),
+		amount: $('#cost-input').val()
+	};
 
-	alert(alertText);
+	$.post('http://localhost/submodule_test/', requestData, function(data) {
+		console.log(data);
+	});
+
+	$('#label-cost-form').find('input').val('');
+	return false;
 }
