@@ -1,0 +1,16 @@
+{
+	"appURL": "http://localhost/mtracker/",
+	"defaultSection": "index",
+	"sections": [{
+		"sectionName": "index",
+		"title": "MTracker"
+	},{
+		"sectionName": "login",
+		"title": "MTracker - Login",
+		"menuLabel": "Login"
+	},{
+		"sectionName": "logout",
+		"title": "MTracker - Logout",
+		"menuLabel": "Logout"
+	}]
+}
