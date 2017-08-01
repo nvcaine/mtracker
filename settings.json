@@ -16,5 +16,8 @@
 		"sectionName": "logout",
 		"title": "MTracker - Logout",
 		"menuLabel": "Logout"
+	},{
+		"sectionName": "items_auto",
+		"title": "MTracker - items_auto"
 	}]
 }
