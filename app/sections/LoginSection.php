@@ -34,21 +34,21 @@ class LoginSection extends AbstractAuthSection {
 
 	private function getUserByCredentials($username, $password) {
 
-		// $userProxy = new UsersProxy(DBWrapper::cloneInstance());
+		$userProxy = new UsersProxy(DBWrapper::cloneInstance());
 
-		// return $userProxy->getUserByCredentials($username, hash('sha256', $password));
+		return $userProxy->getUserByCredentials($username, hash('sha256', $password));
 
-		if($username == 'admin' && $password == 'admin')
-			return array(
-				array(
-					'id' => 1,
-					'name' => 'Romi Halasz',
-					'email' => 'admin',
-					'type' => 'admin'
-				)
-			);
+		// if($username == 'admin' && $password == 'admin')
+		// 	return array(
+		// 		array(
+		// 			'id' => 1,
+		// 			'name' => 'Romi Halasz',
+		// 			'email' => 'admin',
+		// 			'type' => 'admin'
+		// 		)
+		// 	);
 
-		return null;
+		// return null;
 	}
 
 	private function logUserIn($user, $remember = false) {
