@@ -37,18 +37,6 @@ class LoginSection extends AbstractAuthSection {
 		$userProxy = new UsersProxy(DBWrapper::cloneInstance());
 
 		return $userProxy->getUserByCredentials($username, hash('sha256', $password));
-
-		// if($username == 'admin' && $password == 'admin')
-		// 	return array(
-		// 		array(
-		// 			'id' => 1,
-		// 			'name' => 'Romi Halasz',
-		// 			'email' => 'admin',
-		// 			'type' => 'admin'
-		// 		)
-		// 	);
-
-		// return null;
 	}
 
 	private function logUserIn($user, $remember = false) {

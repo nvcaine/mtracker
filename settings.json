@@ -5,6 +5,10 @@
 		"sectionName": "index",
 		"title": "MTracker"
 	},{
+		"sectionName": "expenses",
+		"title": "MTracker - Expenses",
+		"menuLabel": "Expenses"
+	},{
 		"sectionName": "login",
 		"title": "MTracker - Login",
 		"menuLabel": "Login"

@@ -10,6 +10,7 @@
 	</header>
 
 	<main class="container">
+		{if isset($activeLogin)}
 		<form id="label-cost-form" method="post">
 			<div class="input-group input-group-lg input-container">
 				<input id="label-input" type="text" class="form-control" placeholder="Enter item name" required>
@@ -20,6 +21,9 @@
 			<button type="submit" id="submit_button" class="btn btn-lg btn-success">Submit</button>
 			<button type="reset" class="btn btn-lg btn-warning">Reset</button>
 		</form>
+		{else}
+		<p>Please login.</p>
+		{/if}
 	</main>
 
 	{include file='components/footer.tpl'}
